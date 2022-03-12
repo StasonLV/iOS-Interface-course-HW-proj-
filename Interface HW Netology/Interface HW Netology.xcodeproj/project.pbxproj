@@ -15,6 +15,7 @@
 		846C057F27DD0E5B00F53F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C057D27DD0E5B00F53F55 /* LaunchScreen.storyboard */; };
 		846C058727DD10A300F53F55 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C058627DD10A300F53F55 /* FeedViewController.swift */; };
 		846C058927DD10DF00F53F55 /* ProfileViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C058827DD10DF00F53F55 /* ProfileViewConroller.swift */; };
+		846C058C27DD15ED00F53F55 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C058B27DD15ED00F53F55 /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		846C058027DD0E5B00F53F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		846C058627DD10A300F53F55 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		846C058827DD10DF00F53F55 /* ProfileViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewConroller.swift; sourceTree = "<group>"; };
+		846C058B27DD15ED00F53F55 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,6 @@
 				846C057D27DD0E5B00F53F55 /* LaunchScreen.storyboard */,
 				846C058027DD0E5B00F53F55 /* Info.plist */,
 				846C058627DD10A300F53F55 /* FeedViewController.swift */,
-				846C058827DD10DF00F53F55 /* ProfileViewConroller.swift */,
 			);
 			path = "Interface HW Netology";
 			sourceTree = "<group>";
@@ -77,6 +78,8 @@
 		846C058A27DD14C100F53F55 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				846C058827DD10DF00F53F55 /* ProfileViewConroller.swift */,
+				846C058B27DD15ED00F53F55 /* ProfileHeaderView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846C058927DD10DF00F53F55 /* ProfileViewConroller.swift in Sources */,
+				846C058C27DD15ED00F53F55 /* ProfileHeaderView.swift in Sources */,
 				846C057727DD0E5000F53F55 /* ViewController.swift in Sources */,
 				846C057327DD0E5000F53F55 /* AppDelegate.swift in Sources */,
 				846C058727DD10A300F53F55 /* FeedViewController.swift in Sources */,
