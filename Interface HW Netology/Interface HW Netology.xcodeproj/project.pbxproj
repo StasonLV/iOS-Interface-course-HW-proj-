@@ -60,6 +60,7 @@
 		846C057127DD0E5000F53F55 /* Interface HW Netology */ = {
 			isa = PBXGroup;
 			children = (
+				846C058A27DD14C100F53F55 /* Profile */,
 				846C057227DD0E5000F53F55 /* AppDelegate.swift */,
 				846C057427DD0E5000F53F55 /* SceneDelegate.swift */,
 				846C057627DD0E5000F53F55 /* ViewController.swift */,
@@ -71,6 +72,13 @@
 				846C058827DD10DF00F53F55 /* ProfileViewConroller.swift */,
 			);
 			path = "Interface HW Netology";
+			sourceTree = "<group>";
+		};
+		846C058A27DD14C100F53F55 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
