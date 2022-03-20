@@ -15,9 +15,9 @@ class ProfileViewConroller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
-        profileHeader.avatarImageView?.image = UIImage(named: "avatar.jpg")
-        profileHeader.nameLabel?.text = "Stanislav Lezovsky"
-        profileHeader.statusLabel?.text = "Waiting for something..."
+        profileHeader.avatarImageView.image = UIImage(named: "avatar.jpg")
+        profileHeader.nameLabel.text = "Stanislav Lezovsky"
+        profileHeader.statusLabel.text = "Waiting for something..."
         view.addSubview(profileHeader)
 
     }
