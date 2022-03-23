@@ -25,7 +25,6 @@ class ProfileHeaderView: UIView {
         image.layer.borderWidth = 3
         image.layer.borderColor = UIColor.white.cgColor
         image.translatesAutoresizingMaskIntoConstraints = false
-
         
         return image
         }()
@@ -90,13 +89,12 @@ class ProfileHeaderView: UIView {
       
     
     func setupConstraints() {
-    
-    
+        
     NSLayoutConstraint.activate([
         avatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
         avatarImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
         avatarImageView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
-        avatarImageView.widthAnchor.constraint(equalTo: avatarImageView.heightAnchor, constant: 10),
+        avatarImageView.widthAnchor.constraint(equalTo: avatarImageView.heightAnchor, constant: 5),
 
         nameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 27),
         nameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 34),
@@ -105,7 +103,7 @@ class ProfileHeaderView: UIView {
 
         statusLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 34),
         statusLabel.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor),
-        statusLabel.topAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
+        statusLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 0),
         statusLabel.bottomAnchor.constraint(equalTo: statusButton.topAnchor, constant: 34),
         
         statusButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
