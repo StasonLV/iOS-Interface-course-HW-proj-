@@ -14,14 +14,12 @@ class ProfileViewConroller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         profileHeader.statusSetText.delegate = self
         view.backgroundColor = .lightGray
         profileHeader.avatarImageView.image = UIImage(named: "avatar.jpg")
         profileHeader.nameLabel.text = "Stanislav Lezovsky"
         profileHeader.statusLabel.text = "Waiting for something..."
         view.addSubview(profileHeader)
-
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
