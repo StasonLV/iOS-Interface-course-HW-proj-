@@ -8,8 +8,18 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    struct Constants {
+        static let refColor = UIColor(hexString: "#4885CC")
+        static let buttonImage = UIImage(named: "pixel")
+        static let tintedImage = buttonImage?.withRenderingMode(.alwaysTemplate)
+    }
+    
     let scrollView: UIScrollView = {
         let scroll = UIScrollView()
+        scroll.isScrollEnabled = true
+        scroll.contentSize = CGSize(width: 300, height: 400)
+        scroll.translatesAutoresizingMaskIntoConstraints = false
         return scroll
     }()
     
@@ -17,20 +27,17 @@ class LoginViewController: UIViewController {
         let button = UIButton()
         button.layer.cornerRadius = 10
         button.setTitle("Log In", for: .normal)
-        button.backgroundColor = .systemBlue
-        //button.setBackgroundImage(tintedImage, for: .normal)
+        button.backgroundColor = Constants.refColor
+        button.setBackgroundImage(Constants.tintedImage, for: .normal)
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(
-                        self,
-                        action: #selector(loginAction),
-                        for: .touchUpInside
+            self,
+            action: #selector(loginAction),
+            for: .touchUpInside
         )
         return button
     }()
-    
-    //static let buttonImage = UIImage(named: "pixel")
-    //static let tintedImage = buttonImage?.withRenderingMode(.alwaysTemplate)
     
     let image: UIImageView = {
         let image = UIImageView()
@@ -73,16 +80,15 @@ class LoginViewController: UIViewController {
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
-
-    let content: UIContentView = {
-        let content = UIContentView(setupLoginView())
-        return content
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoginView()
         self.hideKeyboardWhenTappedAround()
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
     }
     
     @objc func loginAction() {
@@ -90,42 +96,48 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
-    @objc private func kbdShow(notification: NSNotification) {
-        if let kbdSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            scrollView.contentInset.bottom = kbdSize.height
-            scrollView.verticalScrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbdSize.height, right: 0)
+    @objc func adjustForKeyboard(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            scrollView.contentInset = .zero
+        } else {
+            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
         }
-    }
-    @objc private func kbdHide(notification: NSNotification) {
-        scrollView.contentInset.bottom = .zero
-        scrollView.verticalScrollIndicatorInsets = .zero
+        scrollView.scrollIndicatorInsets = scrollView.contentInset
     }
     
     func setupLoginView() {
         super.navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = .systemGray5
         image.image = UIImage(named: "logo")
-        view.addSubview(loginButton)
-        view.addSubview(image)
-        view.addSubview(loginStack)
+        view.addSubview(scrollView)
+        scrollView.addSubview(loginButton)
+        scrollView.addSubview(image)
+        scrollView.addSubview(loginStack)
         loginStack.addArrangedSubview(loginText)
         loginStack.addArrangedSubview(passwordText)
         
         NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             loginStack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             loginStack.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 120),
             loginStack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             loginStack.heightAnchor.constraint(equalToConstant: 100),
             image.heightAnchor.constraint(equalToConstant: 100),
             image.widthAnchor.constraint(equalToConstant: 100),
-            image.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 120),
+            image.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 120),
             image.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginButton.topAnchor.constraint(equalTo: loginStack.bottomAnchor, constant: 16),
             loginButton.heightAnchor.constraint(equalToConstant: 50),
             loginButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             loginButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
-
+        
     }
 }
 
@@ -151,5 +163,25 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension UIColor {
+    convenience init(hexString: String) {
+        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt64()
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (255, 0, 0, 0)
+        }
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
 }
