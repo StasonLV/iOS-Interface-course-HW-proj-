@@ -68,8 +68,7 @@ final class ProfileHeaderView: UIView {
         textSet.borderStyle = .roundedRect
         textSet.layer.cornerRadius = 12
         textSet.placeholder = "Set your status here..."
-        textSet.translatesAutoresizingMaskIntoConstraints = false
-        
+        textSet.translatesAutoresizingMaskIntoConstraints = false        
         return textSet
     }()
     
@@ -82,7 +81,6 @@ final class ProfileHeaderView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
         setupView()
     }
     
@@ -127,4 +125,3 @@ final class ProfileHeaderView: UIView {
         ])
     }
 }
-

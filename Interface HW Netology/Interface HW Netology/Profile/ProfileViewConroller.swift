@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewConroller: UIViewController {
+final class ProfileViewConroller: UIViewController {
     
     let profileHeader = ProfileHeaderView()
     
@@ -38,7 +38,9 @@ class ProfileViewConroller: UIViewController {
         print("title")
     }
     
-    func setupView() {
+    func setupView() {        
+        profileHeader.statusSetText.delegate = self
+        view.backgroundColor = .lightGray
         profileHeader.avatarImageView.image = UIImage(named: "avatar.jpg")
         profileHeader.nameLabel.text = "Stanislav Lezovsky"
         profileHeader.statusLabel.text = "Waiting for something..."
@@ -60,10 +62,11 @@ class ProfileViewConroller: UIViewController {
     }
 }
 
-extension ProfileViewConroller: UITextFieldDelegate {
+private extension ProfileViewConroller: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         profileHeader.statusSetText.resignFirstResponder()
         
         return true
     }
 }
+
