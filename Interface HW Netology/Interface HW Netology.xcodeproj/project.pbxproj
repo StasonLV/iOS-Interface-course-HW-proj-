@@ -45,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8425F5C727F0E1F400A86AD7 /* PostAndFeed */ = {
+			isa = PBXGroup;
+			children = (
+				846C058627DD10A300F53F55 /* FeedViewController.swift */,
+				8425F5C527F0E1ED00A86AD7 /* PostViewController.swift */,
+				8425F5C827F0E22700A86AD7 /* PostData.swift */,
+				840CB67927F0EC1D00431648 /* InfoViewController.swift */,
+			);
+			path = PostAndFeed;
+			sourceTree = "<group>";
+		};
 		846C056627DD0E5000F53F55 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +75,7 @@
 		846C057127DD0E5000F53F55 /* Interface HW Netology */ = {
 			isa = PBXGroup;
 			children = (
+				8425F5C727F0E1F400A86AD7 /* PostAndFeed */,
 				846C058A27DD14C100F53F55 /* Profile */,
 				846C057227DD0E5000F53F55 /* AppDelegate.swift */,
 				846C057427DD0E5000F53F55 /* SceneDelegate.swift */,
@@ -72,7 +84,6 @@
 				846C057B27DD0E5B00F53F55 /* Assets.xcassets */,
 				846C057D27DD0E5B00F53F55 /* LaunchScreen.storyboard */,
 				846C058027DD0E5B00F53F55 /* Info.plist */,
-				846C058627DD10A300F53F55 /* FeedViewController.swift */,
 			);
 			path = "Interface HW Netology";
 			sourceTree = "<group>";
@@ -160,7 +171,10 @@
 			files = (
 				843A71AE27F44D9D009DF245 /* LoginViewController.swift in Sources */,
 				846C058927DD10DF00F53F55 /* ProfileViewConroller.swift in Sources */,
+				8425F5C927F0E22700A86AD7 /* PostData.swift in Sources */,
 				846C058C27DD15ED00F53F55 /* ProfileHeaderView.swift in Sources */,
+				8425F5C627F0E1ED00A86AD7 /* PostViewController.swift in Sources */,
+				840CB67A27F0EC1D00431648 /* InfoViewController.swift in Sources */,
 				846C057727DD0E5000F53F55 /* ViewController.swift in Sources */,
 				846C057327DD0E5000F53F55 /* AppDelegate.swift in Sources */,
 				846C058727DD10A300F53F55 /* FeedViewController.swift in Sources */,
@@ -327,7 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-1112.Interface-HW-Netology";
+				PRODUCT_BUNDLE_IDENTIFIER = "-1122.Interface-HW-Netology";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -356,7 +370,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-1112.Interface-HW-Netology";
+				PRODUCT_BUNDLE_IDENTIFIER = "-1122.Interface-HW-Netology";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
