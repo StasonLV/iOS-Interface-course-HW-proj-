@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		843A71AE27F44D9D009DF245 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A71AD27F44D9D009DF245 /* LoginViewController.swift */; };
+		840CB67A27F0EC1D00431648 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CB67927F0EC1D00431648 /* InfoViewController.swift */; };
+		8425F5C627F0E1ED00A86AD7 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F5C527F0E1ED00A86AD7 /* PostViewController.swift */; };
+		8425F5C927F0E22700A86AD7 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F5C827F0E22700A86AD7 /* PostData.swift */; };
 		846C057327DD0E5000F53F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C057227DD0E5000F53F55 /* AppDelegate.swift */; };
 		846C057527DD0E5000F53F55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C057427DD0E5000F53F55 /* SceneDelegate.swift */; };
 		846C057727DD0E5000F53F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C057627DD0E5000F53F55 /* ViewController.swift */; };
@@ -20,7 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		843A71AD27F44D9D009DF245 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		840CB67927F0EC1D00431648 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		8425F5C527F0E1ED00A86AD7 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		8425F5C827F0E22700A86AD7 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		846C056F27DD0E5000F53F55 /* Interface HW Netology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interface HW Netology.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C057227DD0E5000F53F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846C057427DD0E5000F53F55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +97,6 @@
 			children = (
 				846C058827DD10DF00F53F55 /* ProfileViewConroller.swift */,
 				846C058B27DD15ED00F53F55 /* ProfileHeaderView.swift */,
-				843A71AD27F44D9D009DF245 /* LoginViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -169,7 +172,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843A71AE27F44D9D009DF245 /* LoginViewController.swift in Sources */,
 				846C058927DD10DF00F53F55 /* ProfileViewConroller.swift in Sources */,
 				8425F5C927F0E22700A86AD7 /* PostData.swift in Sources */,
 				846C058C27DD15ED00F53F55 /* ProfileHeaderView.swift in Sources */,

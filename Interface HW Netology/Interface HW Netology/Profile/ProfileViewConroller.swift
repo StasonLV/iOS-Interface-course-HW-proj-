@@ -11,19 +11,31 @@ final class ProfileViewConroller: UIViewController {
     
     let profileHeader = ProfileHeaderView()
     
+    var secondButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("title", for: .normal)
+        button.frame.size = CGSize(width: 100, height: 50)
+        button.backgroundColor = .systemBlue
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self,
+                         action: #selector(secondButtonAction),
+                         for: .touchUpInside)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileHeader.statusSetText.delegate = self
-        view.backgroundColor = .lightGray
-        profileHeader.avatarImageView.image = UIImage(named: "avatar.jpg")
-        profileHeader.nameLabel.text = "Stanislav Lezovsky"
-        profileHeader.statusLabel.text = "Waiting for something..."
-        view.addSubview(profileHeader)
+        setupView()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with : event)
+    }
+    
+    @objc func secondButtonAction() {
+        print("title")
     }
     
     func setupView() {        
