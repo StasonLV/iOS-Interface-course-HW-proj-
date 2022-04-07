@@ -50,7 +50,7 @@ final class ProfileViewConroller: UIViewController {
     }
 }
 
-extension ProfileViewConroller: UITextFieldDelegate {
+private extension ProfileViewConroller: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         profileHeader.statusSetText.resignFirstResponder()
         
