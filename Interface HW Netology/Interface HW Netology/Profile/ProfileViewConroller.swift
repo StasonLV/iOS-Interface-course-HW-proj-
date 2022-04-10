@@ -9,11 +9,21 @@ import UIKit
 
 final class ProfileViewConroller: UIViewController {
     
-    let profileHeader = ProfileHeaderView()
+    let cellID = "cellId"
+    let arrayOfPosts = [f1Post, spacePost, motoPost, concertPost]
+    let postsTable: UITableView = {
+        let table = UITableView(frame: .zero, style: .grouped)
+        table.scrollsToTop = true
+        table.translatesAutoresizingMaskIntoConstraints = false
+        return table
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        postsTable.register(PostTableViewCell.self, forCellReuseIdentifier: cellID)
+        postsTable.dataSource = self
+        postsTable.delegate = self
+        setupTable()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -21,30 +31,44 @@ final class ProfileViewConroller: UIViewController {
         super.touchesBegan(touches, with : event)
     }
     
-    func setupView() {        
-        profileHeader.statusSetText.delegate = self
-        view.backgroundColor = .lightGray
-        profileHeader.avatarImageView.image = UIImage(named: "avatar.jpg")
-        profileHeader.nameLabel.text = "Stanislav Lezovsky"
-        profileHeader.statusLabel.text = "Waiting for something..."
-        profileHeader.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray
-        view.addSubview(profileHeader)
-
-        NSLayoutConstraint.activate ([
-            profileHeader.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            profileHeader.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
-            profileHeader.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            profileHeader.heightAnchor.constraint(equalToConstant: 220)
+    func setupTable() {
+        view.addSubview(postsTable)
+        view.backgroundColor = .systemGray4
+        
+        NSLayoutConstraint.activate([
+            postsTable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            postsTable.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            postsTable.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            postsTable.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }
 
 extension ProfileViewConroller: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        profileHeader.statusSetText.resignFirstResponder()
-        
+        ProfileHeaderView().statusSetText.resignFirstResponder()
         return true
     }
 }
 
+extension ProfileViewConroller: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayOfPosts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = postsTable.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! PostTableViewCell
+        let currentPost = arrayOfPosts[indexPath.row]
+        cell.post = currentPost
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: postsTable.frame.width, height: 220))
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 220
+    }
+}

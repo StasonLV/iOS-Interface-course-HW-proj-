@@ -9,33 +9,38 @@ import UIKit
 
 final class ProfileHeaderView: UIView {
     
+    struct Constants {
+        static let profileImage = UIImage(named: "avatar.jpg")
+        static let nameText = "Stanislav Lezovsky"
+        static let headerText = "Waiting for something..."
+    }
+    
     var nameLabel: UILabel = {
         let label = UILabel()
+        label.text = Constants.nameText
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
     var avatarImageView: UIImageView = {
         let image = UIImageView()
+        image.image = Constants.profileImage
         image.layer.masksToBounds = true
         image.layer.cornerRadius = 60
         image.layer.borderWidth = 3
         image.layer.borderColor = UIColor.white.cgColor
         image.translatesAutoresizingMaskIntoConstraints = false
-        
-        
         return image
     }()
     
     var statusLabel: UILabel = {
         let label = UILabel()
+        label.text = Constants.headerText
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         label.textColor = .gray
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
@@ -54,7 +59,6 @@ final class ProfileHeaderView: UIView {
                          action: #selector(setStatus),
                          for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        
         return button
     }()
     
@@ -74,7 +78,6 @@ final class ProfileHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupView()
         setupConstraints()
     }
