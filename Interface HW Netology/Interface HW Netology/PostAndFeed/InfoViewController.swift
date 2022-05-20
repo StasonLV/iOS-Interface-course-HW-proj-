@@ -8,19 +8,20 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-    
-    var actionButton: UIButton = {
+
+    lazy var actionButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBrown
         button.layer.cornerRadius = 12
         button.setTitle("Алерт", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24)
-        button.addTarget(self,
-                         action: #selector(alertAction),
-                         for: .touchUpInside)
+        button.addTarget(
+            self,
+            action: #selector(alertAction),
+            for: .touchUpInside
+        )
         button.translatesAutoresizingMaskIntoConstraints = false
-        
         return button
     }()
 
@@ -29,7 +30,7 @@ class InfoViewController: UIViewController {
         view.backgroundColor = .systemGray3
         setupActionButton()
     }
-    
+
     private func setupActionButton() {
         self.view.addSubview(self.actionButton)
         self.actionButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100).isActive = true
@@ -37,22 +38,27 @@ class InfoViewController: UIViewController {
         self.actionButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
         self.actionButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
-    
+
     @objc private func alertAction() {
-        let alert = UIAlertController(title: "Алерт", message: "Тестовый алерт", preferredStyle: .actionSheet)
-        let firstAction = UIAlertAction(title: "Первое действие", style: .default) {(action) in
+        let alert = UIAlertController(
+            title: "Алерт",
+            message: "Тестовый алерт",
+            preferredStyle: .actionSheet
+        )
+        let firstAction = UIAlertAction(
+            title: "Первое действие",
+            style: .default
+        ) {_ in
             print("первое действие")
         }
         alert.addAction(firstAction)
-        let secondAction = UIAlertAction(title: "Второе действие", style: .destructive) { (action) in
+        let secondAction = UIAlertAction(
+            title: "Второе действие",
+            style: .destructive
+        ) {_ in
             print("второе действие")
         }
         alert.addAction(secondAction)
         present(alert, animated: true)
     }
-    
 }
-
-
-
-

@@ -8,7 +8,6 @@
 import UIKit
 
 final class ProfileViewConroller: UIViewController {
-    
     let cellID = "cellId"
     let arrayOfPosts = [f1Post, spacePost, motoPost, concertPost]
     let postsTable: UITableView = {
@@ -17,7 +16,7 @@ final class ProfileViewConroller: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         postsTable.register(PostTableViewCell.self, forCellReuseIdentifier: cellID)
@@ -25,16 +24,15 @@ final class ProfileViewConroller: UIViewController {
         postsTable.delegate = self
         setupTable()
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
-        super.touchesBegan(touches, with : event)
+        super.touchesBegan(touches, with: event)
     }
-    
+
     func setupTable() {
         view.addSubview(postsTable)
         view.backgroundColor = .systemGray4
-        
         NSLayoutConstraint.activate([
             postsTable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             postsTable.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -55,19 +53,21 @@ extension ProfileViewConroller: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfPosts.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = postsTable.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! PostTableViewCell
+        guard let cell = postsTable.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as? PostTableViewCell else {
+            return UITableViewCell()
+        }
         let currentPost = arrayOfPosts[indexPath.row]
         cell.post = currentPost
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: postsTable.frame.width, height: 220))
         return header
     }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 220
     }
