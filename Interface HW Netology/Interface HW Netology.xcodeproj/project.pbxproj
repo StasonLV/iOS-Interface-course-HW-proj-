@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		840CB67A27F0EC1D00431648 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CB67927F0EC1D00431648 /* InfoViewController.swift */; };
-		8425F5C627F0E1ED00A86AD7 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F5C527F0E1ED00A86AD7 /* PostViewController.swift */; };
-		8425F5C927F0E22700A86AD7 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F5C827F0E22700A86AD7 /* PostData.swift */; };
+		842A6BB52802BCEF0061DA92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A6BB42802BCEF0061DA92 /* LoginViewController.swift */; };
 		846C057327DD0E5000F53F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C057227DD0E5000F53F55 /* AppDelegate.swift */; };
 		846C057527DD0E5000F53F55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C057427DD0E5000F53F55 /* SceneDelegate.swift */; };
 		846C057727DD0E5000F53F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C057627DD0E5000F53F55 /* ViewController.swift */; };
@@ -19,12 +18,30 @@
 		846C058727DD10A300F53F55 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C058627DD10A300F53F55 /* FeedViewController.swift */; };
 		846C058927DD10DF00F53F55 /* ProfileViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C058827DD10DF00F53F55 /* ProfileViewConroller.swift */; };
 		846C058C27DD15ED00F53F55 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C058B27DD15ED00F53F55 /* ProfileHeaderView.swift */; };
+		84F387BF28381D20004ACE75 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E996BF280311F200B833C0 /* PostTableViewCell.swift */; };
+		84F387C028381D23004ACE75 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E996BD280301BA00B833C0 /* PostModel.swift */; };
+		84F387C128381D2C004ACE75 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F5C827F0E22700A86AD7 /* PostData.swift */; };
+		84F387C228381D30004ACE75 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F5C527F0E1ED00A86AD7 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8490D03C2838114500E7425E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		840CB67927F0EC1D00431648 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8425F5C527F0E1ED00A86AD7 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8425F5C827F0E22700A86AD7 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		842A6BB42802BCEF0061DA92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		846C056F27DD0E5000F53F55 /* Interface HW Netology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interface HW Netology.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C057227DD0E5000F53F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846C057427DD0E5000F53F55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,8 @@
 		846C058627DD10A300F53F55 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		846C058827DD10DF00F53F55 /* ProfileViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewConroller.swift; sourceTree = "<group>"; };
 		846C058B27DD15ED00F53F55 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		84E996BD280301BA00B833C0 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		84E996BF280311F200B833C0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +116,9 @@
 			children = (
 				846C058827DD10DF00F53F55 /* ProfileViewConroller.swift */,
 				846C058B27DD15ED00F53F55 /* ProfileHeaderView.swift */,
+				842A6BB42802BCEF0061DA92 /* LoginViewController.swift */,
+				84E996BD280301BA00B833C0 /* PostModel.swift */,
+				84E996BF280311F200B833C0 /* PostTableViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -109,8 +131,10 @@
 			buildConfigurationList = 846C058327DD0E5B00F53F55 /* Build configuration list for PBXNativeTarget "Interface HW Netology" */;
 			buildPhases = (
 				846C056B27DD0E5000F53F55 /* Sources */,
+				8490D05D283812EA00E7425E /* ShellScript */,
 				846C056C27DD0E5000F53F55 /* Frameworks */,
 				846C056D27DD0E5000F53F55 /* Resources */,
+				8490D03C2838114500E7425E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,20 +191,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8490D05D283812EA00E7425E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:\"\nexport PATH+=~/\nexport PATH+=\"portable_swiftlint\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		846C056B27DD0E5000F53F55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F387C228381D30004ACE75 /* PostViewController.swift in Sources */,
 				846C058927DD10DF00F53F55 /* ProfileViewConroller.swift in Sources */,
-				8425F5C927F0E22700A86AD7 /* PostData.swift in Sources */,
+				84F387C028381D23004ACE75 /* PostModel.swift in Sources */,
 				846C058C27DD15ED00F53F55 /* ProfileHeaderView.swift in Sources */,
-				8425F5C627F0E1ED00A86AD7 /* PostViewController.swift in Sources */,
 				840CB67A27F0EC1D00431648 /* InfoViewController.swift in Sources */,
 				846C057727DD0E5000F53F55 /* ViewController.swift in Sources */,
 				846C057327DD0E5000F53F55 /* AppDelegate.swift in Sources */,
 				846C058727DD10A300F53F55 /* FeedViewController.swift in Sources */,
+				842A6BB52802BCEF0061DA92 /* LoginViewController.swift in Sources */,
 				846C057527DD0E5000F53F55 /* SceneDelegate.swift in Sources */,
+				84F387C128381D2C004ACE75 /* PostData.swift in Sources */,
+				84F387BF28381D20004ACE75 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +372,7 @@
 		846C058427DD0E5B00F53F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,6 +402,7 @@
 		846C058527DD0E5B00F53F55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
