@@ -7,8 +7,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
-
+final class InfoViewController: UIViewController {
     lazy var actionButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBrown

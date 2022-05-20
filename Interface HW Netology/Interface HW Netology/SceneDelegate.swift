@@ -53,6 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window?.rootViewController = createTabBarController()
         window?.makeKeyAndVisible()
+        // swiftlint:disable unused_optional_binding
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProfileViewConroller: UIViewController {
+class ProfileViewConroller: UIViewController {
     let cellID = "cellId"
     let arrayOfPosts = [f1Post, spacePost, motoPost, concertPost]
     let postsTable: UITableView = {
@@ -30,9 +30,13 @@ final class ProfileViewConroller: UIViewController {
         super.touchesBegan(touches, with: event)
     }
 
-    func setupTable() {
+    private func setupTable() {
         view.addSubview(postsTable)
-        view.backgroundColor = .systemGray4
+        #if RELEASE
+        view.backgroundColor = .cyan
+        #else
+        view.backgroundColor = .magenta
+        #endif
         NSLayoutConstraint.activate([
             postsTable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             postsTable.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -53,7 +57,7 @@ extension ProfileViewConroller: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfPosts.count
     }
-
+    // swiftlint:disable line_length
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = postsTable.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as? PostTableViewCell else {
             return UITableViewCell()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
         struct Constants {
         static let refColor = UIColor(hexString: "#4885CC")
         static let buttonImage = UIImage(named: "pixel")
@@ -99,12 +99,12 @@ class LoginViewController: UIViewController {
         )
     }
 
-    @objc func loginAction() {
+    @objc private func loginAction() {
         let nextVC = ProfileViewConroller()
         navigationController?.pushViewController(nextVC, animated: true)
     }
 
-    @objc func adjustForKeyboard(notification: Notification) {
+    @objc private func adjustForKeyboard(notification: Notification) {
         guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
         else { return }
         let keyboardScreenEndFrame = keyboardValue.cgRectValue
@@ -117,7 +117,7 @@ class LoginViewController: UIViewController {
         scrollView.scrollIndicatorInsets = scrollView.contentInset
     }
 
-    func setupLoginView() {
+    private func setupLoginView() {
         super.navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = .systemGray5
         image.image = UIImage(named: "logo")
@@ -149,7 +149,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension UITextField {
+private extension UITextField {
     func setLeftPaddingPoints(_ amount: CGFloat) {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
         self.leftView = paddingView
@@ -162,7 +162,7 @@ extension UITextField {
     }
 }
 
-extension UIViewController {
+private extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
@@ -174,11 +174,12 @@ extension UIViewController {
     }
 }
 
-extension UIColor {
+private extension UIColor {
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()
         Scanner(string: hex).scanHexInt64(&int)
+        // swiftlint:disable identifier_name
         let a, r, g, b: UInt64
         switch hex.count {
         case 3:
