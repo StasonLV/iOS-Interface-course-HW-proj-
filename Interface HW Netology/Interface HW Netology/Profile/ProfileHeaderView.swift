@@ -90,7 +90,7 @@ final class ProfileHeaderView: UIView {
         setupView()
     }
 
-    @objc func setStatus () {
+    @objc private func setStatus () {
         if let statusText = statusSetText.text {
             statusLabel.text = statusText
         } else if statusSetText.text == "" {
@@ -99,7 +99,7 @@ final class ProfileHeaderView: UIView {
         statusSetText.text?.removeAll()
     }
 
-    func setupView() {
+    private func setupView() {
         addSubview(avatarImageView)
         addSubview(nameLabel)
         addSubview(statusLabel)
@@ -107,7 +107,7 @@ final class ProfileHeaderView: UIView {
         addSubview(statusSetText)
     }
 
-    func setupConstraints() {
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
             avatarImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),

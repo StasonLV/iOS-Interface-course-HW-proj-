@@ -15,7 +15,7 @@ struct LoginPost {
     var likes: Int
     var views: Int
 }
-
+// swiftlint:disable all
 let f1Post = LoginPost(
     author: "F1 official",
     description:

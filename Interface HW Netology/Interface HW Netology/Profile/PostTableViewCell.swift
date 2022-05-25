@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostTableViewCell: UITableViewCell {
+public class PostTableViewCell: UITableViewCell {
     var post: LoginPost? {
         didSet {
             authorLabel.text = post?.author
@@ -90,7 +90,7 @@ class PostTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         super.prepareForReuse()
     }
 }
