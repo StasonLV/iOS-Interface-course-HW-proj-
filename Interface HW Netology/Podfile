@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '15.2'
+
+target 'Interface HW Netology' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Interface HW Netology
+  pod 'SnapKit', '~> 5.0.0'
+
+end
+
+target 'StorageService' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for StorageService
+
+end

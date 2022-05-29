@@ -1,0 +1,6 @@
+framework module Pods_Interface_HW_Netology {
+  umbrella header "Pods-Interface HW Netology-umbrella.h"
+
+  export *
+  module * { export * }
+}

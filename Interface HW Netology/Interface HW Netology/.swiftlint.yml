@@ -5,6 +5,7 @@ identifier_name:
     warning: 40
   excluded:
     - id
+    - Pods
 
 cyclomatic_complexity:
   ignores_case_statements: true
@@ -83,4 +84,3 @@ nesting:
     warning: 2
 
 warning_threshold: 1
-

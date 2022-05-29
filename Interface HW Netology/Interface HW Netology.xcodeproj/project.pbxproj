@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60A37F42F142999E7F7BE4DE /* Pods_Interface_HW_Netology.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B52958A037EEE45FF67D66 /* Pods_Interface_HW_Netology.framework */; };
 		840CB67A27F0EC1D00431648 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CB67927F0EC1D00431648 /* InfoViewController.swift */; };
 		842A6BB52802BCEF0061DA92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A6BB42802BCEF0061DA92 /* LoginViewController.swift */; };
+		844B2E1F283FF98300573E24 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 844B2E1E283FF98300573E24 /* iOSIntPackage */; };
 		846C057327DD0E5000F53F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C057227DD0E5000F53F55 /* AppDelegate.swift */; };
 		846C057527DD0E5000F53F55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C057427DD0E5000F53F55 /* SceneDelegate.swift */; };
 		846C057727DD0E5000F53F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C057627DD0E5000F53F55 /* ViewController.swift */; };
@@ -26,6 +28,7 @@
 		84F387E8283823C4004ACE75 /* StorageService.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F387E5283823C4004ACE75 /* StorageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84F387EB283823C4004ACE75 /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F387E3283823C3004ACE75 /* StorageService.framework */; };
 		84F387EC283823C4004ACE75 /* StorageService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84F387E3283823C3004ACE75 /* StorageService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F89C6637178308BF4ADE05C /* Pods_StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11724CBED4A3E8668D96D7CE /* Pods_StorageService.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		11724CBED4A3E8668D96D7CE /* Pods_StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16E8791702A7EDA2B4CDFC35 /* Pods-Interface HW Netology.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interface HW Netology.debug.xcconfig"; path = "Target Support Files/Pods-Interface HW Netology/Pods-Interface HW Netology.debug.xcconfig"; sourceTree = "<group>"; };
+		331F53A20633FA6E12507DB6 /* Pods-StorageService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorageService.debug.xcconfig"; path = "Target Support Files/Pods-StorageService/Pods-StorageService.debug.xcconfig"; sourceTree = "<group>"; };
+		44A54D6969E9D5E97F753D49 /* Pods-StorageService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorageService.release.xcconfig"; path = "Target Support Files/Pods-StorageService/Pods-StorageService.release.xcconfig"; sourceTree = "<group>"; };
 		840CB67927F0EC1D00431648 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8425F5C527F0E1ED00A86AD7 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8425F5C827F0E22700A86AD7 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
@@ -73,6 +80,8 @@
 		84F387E3283823C3004ACE75 /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F387E5283823C4004ACE75 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		84F387E6283823C4004ACE75 /* StorageService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StorageService.docc; sourceTree = "<group>"; };
+		8DBA424128C77BD343CB8EBD /* Pods-Interface HW Netology.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interface HW Netology.release.xcconfig"; path = "Target Support Files/Pods-Interface HW Netology/Pods-Interface HW Netology.release.xcconfig"; sourceTree = "<group>"; };
+		E9B52958A037EEE45FF67D66 /* Pods_Interface_HW_Netology.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interface_HW_Netology.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F387EB283823C4004ACE75 /* StorageService.framework in Frameworks */,
+				844B2E1F283FF98300573E24 /* iOSIntPackage in Frameworks */,
+				60A37F42F142999E7F7BE4DE /* Pods_Interface_HW_Netology.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F89C6637178308BF4ADE05C /* Pods_StorageService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +123,8 @@
 				846C057127DD0E5000F53F55 /* Interface HW Netology */,
 				84F387E4283823C4004ACE75 /* StorageService */,
 				846C057027DD0E5000F53F55 /* Products */,
+				DDEF2F21A9DE68CCD4AE3B02 /* Pods */,
+				F24E7596F56900BDF687C11A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +174,27 @@
 			path = StorageService;
 			sourceTree = "<group>";
 		};
+		DDEF2F21A9DE68CCD4AE3B02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16E8791702A7EDA2B4CDFC35 /* Pods-Interface HW Netology.debug.xcconfig */,
+				8DBA424128C77BD343CB8EBD /* Pods-Interface HW Netology.release.xcconfig */,
+				331F53A20633FA6E12507DB6 /* Pods-StorageService.debug.xcconfig */,
+				44A54D6969E9D5E97F753D49 /* Pods-StorageService.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F24E7596F56900BDF687C11A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9B52958A037EEE45FF67D66 /* Pods_Interface_HW_Netology.framework */,
+				11724CBED4A3E8668D96D7CE /* Pods_StorageService.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -178,11 +213,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846C058327DD0E5B00F53F55 /* Build configuration list for PBXNativeTarget "Interface HW Netology" */;
 			buildPhases = (
+				3B49303AA813570F769EF345 /* [CP] Check Pods Manifest.lock */,
 				846C056B27DD0E5000F53F55 /* Sources */,
 				8490D05D283812EA00E7425E /* ShellScript */,
 				846C056C27DD0E5000F53F55 /* Frameworks */,
 				846C056D27DD0E5000F53F55 /* Resources */,
 				8490D03C2838114500E7425E /* Embed Frameworks */,
+				E810AFFCDC57D2F61421B971 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +227,9 @@
 				84F387EA283823C4004ACE75 /* PBXTargetDependency */,
 			);
 			name = "Interface HW Netology";
+			packageProductDependencies = (
+				844B2E1E283FF98300573E24 /* iOSIntPackage */,
+			);
 			productName = "Interface HW Netology";
 			productReference = 846C056F27DD0E5000F53F55 /* Interface HW Netology.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84F387ED283823C4004ACE75 /* Build configuration list for PBXNativeTarget "StorageService" */;
 			buildPhases = (
+				66BDA8D88A5ED3E14F71168F /* [CP] Check Pods Manifest.lock */,
 				84F387DE283823C3004ACE75 /* Headers */,
 				84F387DF283823C3004ACE75 /* Sources */,
 				84F387E0283823C3004ACE75 /* Frameworks */,
@@ -239,6 +280,9 @@
 				Base,
 			);
 			mainGroup = 846C056627DD0E5000F53F55;
+			packageReferences = (
+				844B2E1D283FF98300573E24 /* XCRemoteSwiftPackageReference "iOSIntPackage" */,
+			);
 			productRefGroup = 846C057027DD0E5000F53F55 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,6 +314,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3B49303AA813570F769EF345 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Interface HW Netology-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66BDA8D88A5ED3E14F71168F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StorageService-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8490D05D283812EA00E7425E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +374,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:\"\nexport PATH+=~/\nexport PATH+=\"portable_swiftlint\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		E810AFFCDC57D2F61421B971 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Interface HW Netology/Pods-Interface HW Netology-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Interface HW Netology/Pods-Interface HW Netology-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Interface HW Netology/Pods-Interface HW Netology-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -465,6 +570,7 @@
 		};
 		846C058427DD0E5B00F53F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16E8791702A7EDA2B4CDFC35 /* Pods-Interface HW Netology.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -496,6 +602,7 @@
 		};
 		846C058527DD0E5B00F53F55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DBA424128C77BD343CB8EBD /* Pods-Interface HW Netology.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -527,6 +634,7 @@
 		};
 		84F387EE283823C4004ACE75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 331F53A20633FA6E12507DB6 /* Pods-StorageService.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -558,6 +666,7 @@
 		};
 		84F387EF283823C4004ACE75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44A54D6969E9D5E97F753D49 /* Pods-StorageService.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -618,6 +727,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		844B2E1D283FF98300573E24 /* XCRemoteSwiftPackageReference "iOSIntPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TrueMax/iOSIntPackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		844B2E1E283FF98300573E24 /* iOSIntPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 844B2E1D283FF98300573E24 /* XCRemoteSwiftPackageReference "iOSIntPackage" */;
+			productName = iOSIntPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 846C056727DD0E5000F53F55 /* Project object */;
 }
